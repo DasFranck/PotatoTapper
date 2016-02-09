@@ -1,13 +1,3 @@
-//
-// DisplayStuff.hpp for src in /home/dasfranck/Progit/NoGit/PotatoTapper/src
-// 
-// Made by Franck Hochstaetter
-// Login   <hochst_a@epitech.net>
-// 
-// Started on  Fri Feb 05 11:19:43 2016 Franck Hochstaetter
-// Last update Fri Feb 05 12:35:54 2016 Franck Hochstaetter
-//
-
 #ifndef DISPLAYSTUFF_HPP_
 # define DISPLAYSTUFF_HPP_
 
