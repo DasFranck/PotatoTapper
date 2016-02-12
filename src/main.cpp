@@ -22,10 +22,6 @@ int			main()
     {
       ElapsedTime = static_cast<int>((LastTime - TimePlayed).asSeconds());
       ElapsedTime = (ElapsedTime < 1 ? 1 : ElapsedTime);
-      /*
-      DEFPRINT("Tapped potatoes in the last second (" << static_cast<int>(LastTime.asSeconds()) <<  "): "
-                << PotatoBuffer / ElapsedTime)
-      */
       LastTime = TimePlayed;
       pg.LPB = PotatoBuffer;
       PotatoBuffer = 0;
@@ -47,12 +43,22 @@ int			main()
           if ((event.text.unicode >= 'A' && event.text.unicode <= 'Z') ||
               (event.text.unicode >= 'a' && event.text.unicode <= 'z'))
             ++PotatoBuffer && ++pg.PotatoStack;
+          else if (event.text.unicode >= '0' && event.text.unicode <= '9')
+          {
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt) &&
+                sf::Keyboard::isKeyPressed(sf::Keyboard::LControl))
+              pg.buyBuilding(event.text.unicode - '0', 100);
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl))
+              pg.buyBuilding(event.text.unicode - '0', 50);
+            else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt))
+              pg.buyBuilding(event.text.unicode - '0', 10);
+            else
+              pg.buyBuilding(event.text.unicode - '0', 1);
+          }
           break;
       }
     }
-
     ds.display(pg);
   }
-
   return (0);
 }
