@@ -14,5 +14,5 @@ Like Cookie Clicker minus cookies and clicks but with potatoes and tapping.
 * Upgrades (e.g. tapping value *2).
 
 ## Changelog
-### Version 0.1 (05/02/2015)
+### Version 0.1 (05/02/2016)
 * Initial Release
