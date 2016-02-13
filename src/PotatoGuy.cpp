@@ -34,5 +34,5 @@ void	PotatoGuy::buyBuilding(char idBuilding, size_t nb)
 
 int	PotatoGuy::getIncome()
 {
-  return (farm.nb * farm.ics + plantpot.nb * plantpot.nb);
+  return (plantpot.nb * plantpot.ics + farm.nb * farm.ics);
 }
