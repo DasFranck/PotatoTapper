@@ -14,7 +14,7 @@ void	PotatoGuy::buyBuilding(char idBuilding, size_t nb)
     case 1:
       std::cout << "Price : " << farm.buy_cost << std::endl;
       if (farm.buy(nb, this->PotatoStack))
-        std::cout << "Ain't got enought money to buy dat" << std::endl;
+        std::cout << "Ain't got enought money to but" << nb << " Farm!" << std::endl;
       else
         std::cout << "Buying " << nb << " Farm!"<< std::endl;
       break;
@@ -22,4 +22,9 @@ void	PotatoGuy::buyBuilding(char idBuilding, size_t nb)
     default:
       break;
   }
+}
+
+int	PotatoGuy::getIncome()
+{
+  return (farm.nb * farm.ics);
 }

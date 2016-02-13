@@ -10,7 +10,12 @@ class PotatoGuy
   public:
     PotatoGuy();
     ~PotatoGuy() {}
-    void buyBuilding(char idBuilding, size_t nb);
+
+    //Methods
+    int		getIncome();
+    void	buyBuilding(char idBuilding, size_t nb);
+
+  //Attributes
   public:
     size_t	PotatoStack;      // Potato number than the player have.
     size_t	LPB;              // Last second Potato Buffer.

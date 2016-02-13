@@ -18,6 +18,7 @@ int			main()
     sf::Event event;
 
     TimePlayed = clock.getElapsedTime();
+    // Every second actions.
     if (static_cast<int>(LastTime.asSeconds()) != static_cast<int>(TimePlayed.asSeconds()))
     {
       ElapsedTime = static_cast<int>((LastTime - TimePlayed).asSeconds());
@@ -25,8 +26,10 @@ int			main()
       LastTime = TimePlayed;
       pg.LPB = PotatoBuffer;
       PotatoBuffer = 0;
+      pg.PotatoStack += pg.getIncome();
     }
 
+    //Event handler
     while (ds.window.pollEvent(event))
     {
       switch (event.type)
@@ -40,9 +43,11 @@ int			main()
           break;
 
         case sf::Event::TextEntered:
+          //Tapping inputs
           if ((event.text.unicode >= 'A' && event.text.unicode <= 'Z') ||
               (event.text.unicode >= 'a' && event.text.unicode <= 'z'))
             ++PotatoBuffer && ++pg.PotatoStack;
+          //Menu inputs
           else if (event.text.unicode >= '0' && event.text.unicode <= '9')
           {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt) &&
@@ -58,6 +63,15 @@ int			main()
           break;
       }
     }
+
+    //Quit game (and saving when it will be implemented)
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+    {
+      //Save here
+      return (0);
+    }
+
+    //Display stuff on screen
     ds.display(pg);
   }
   return (0);
