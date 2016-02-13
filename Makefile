@@ -3,7 +3,9 @@ NAME	= PotatoTapper
 CXX	= g++
 
 SRCS	= src/main.cpp \
-	  src/DisplayStuff.cpp
+	  src/DisplayStuff.cpp \
+	  src/PotatoGuy.cpp \
+	  src/Buildings/Building.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

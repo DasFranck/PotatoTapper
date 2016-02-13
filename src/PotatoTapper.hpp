@@ -8,6 +8,6 @@
 
 // Include Classes
 # include "DisplayStuff.hpp"
-
+# include "PotatoGuy.hpp"
 
 #endif /* !POTATOTAPPER_HPP_ */
