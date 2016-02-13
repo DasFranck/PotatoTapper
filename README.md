@@ -20,7 +20,7 @@ Like Cookie Clicker minus cookies and clicks but with potatoes and tapping.
 
 ## Changelog
 ### Version 0.2 (xx/xx/2016)
-* Buyable buildings (Only Planting Pots and Forms for now)
+* Buyable buildings (Only Planting Pots and Farms for now)
 * Automatic income from buildings
 * Quit game by tap on Escape key
 

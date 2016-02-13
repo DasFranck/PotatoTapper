@@ -3,6 +3,7 @@
 
 # include <cstdlib>
 # include "Buildings/Farm.hpp"
+# include "Buildings/PlantingPot.hpp"
 
 // Player's class
 class PotatoGuy
@@ -20,6 +21,7 @@ class PotatoGuy
     size_t	PotatoStack;      // Potato number than the player have.
     size_t	LPB;              // Last second Potato Buffer.
     Farm	farm;
+    PlantingPot	plantpot;
 };
 
 #endif /* !POTATOGUY_HPP_ */
